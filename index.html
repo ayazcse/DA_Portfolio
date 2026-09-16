@@ -548,6 +548,27 @@
 
   .project-metric::before { content: '◆'; font-size: 0.5rem; }
 
+  .project-card-featured {
+    border-color: rgba(77,217,172,0.35);
+    box-shadow: 0 0 0 1px rgba(77,217,172,0.08), 0 20px 40px -20px rgba(0,0,0,0.5);
+  }
+
+  .featured-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    background: rgba(77,217,172,0.1);
+    border: 1px solid rgba(77,217,172,0.3);
+    padding: 0.25rem 0.7rem;
+    border-radius: 100px;
+    width: fit-content;
+  }
+
   /* CREDENTIALS */
   .cred-grid {
     display: grid;
@@ -903,11 +924,11 @@
       <div class="hero-card">
         <div class="stats-grid">
           <div class="stat-box">
-            <div class="stat-num c-purple">160K+</div>
+            <div class="stat-num c-purple">1M+</div>
             <div class="stat-label">Records Analyzed</div>
           </div>
           <div class="stat-box">
-            <div class="stat-num c-teal">3</div>
+            <div class="stat-num c-teal">5</div>
             <div class="stat-label">Live Dashboards</div>
           </div>
           <div class="stat-box">
@@ -923,11 +944,11 @@
           <span class="tag">SQL</span>
           <span class="tag">Python</span>
           <span class="tag">Power BI</span>
-          <span class="tag">Tableau</span>
+          <span class="tag">PostgreSQL</span>
           <span class="tag">DAX</span>
-          <span class="tag">Pandas</span>
-          <span class="tag">Excel</span>
-          <span class="tag">EDA</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">SHAP</span>
+          <span class="tag">GenAI</span>
         </div>
       </div>
     </div>
@@ -996,11 +1017,62 @@
 
   <div class="projects-grid">
 
-    <!-- PROJECT 1 -->
+    <!-- PROJECT 1: MaintainIQ (NEW — flagship project, shown first) -->
+    <div class="project-card project-card-featured reveal">
+      <div class="project-glow project-glow-teal"></div>
+      <div class="project-icon-row">
+        <div class="project-icon icon-teal">🏭</div>
+        <div class="project-links">
+          <a href="https://github.com/ayazcse/maintainiq" class="project-link" target="_blank">⌥ GitHub</a>
+          <a href="https://www.linkedin.com/posts/activity-7505943787240779776-Q2dl" class="project-link" target="_blank">↗ LinkedIn Post</a>
+        </div>
+      </div>
+      <span class="featured-badge">★ Flagship Project</span>
+      <div class="project-title">MaintainIQ — AI-Powered Predictive<br>Maintenance & Operations Intelligence</div>
+      <div class="project-metric">876K+ sensor readings · live PostgreSQL · ROC-AUC 0.66, honestly reported</div>
+      <div class="project-desc">
+        End-to-end predictive maintenance platform for a simulated 300-machine, 4-plant manufacturer: a real PostgreSQL warehouse (1.2M+ rows, FK-enforced), 27 SQL analytics queries, ML failure prediction with SHAP explainability, dual anomaly detection, a grounded GenAI analyst, FastAPI, Streamlit, and Power BI — backed by 59 passing automated tests and unmassaged results, including a calibration bug I found and fixed.
+      </div>
+      <div class="project-tech">
+        <span class="tech-pill pill-blue">Python</span>
+        <span class="tech-pill pill-purple">PostgreSQL</span>
+        <span class="tech-pill pill-orange">XGBoost</span>
+        <span class="tech-pill pill-teal">SHAP</span>
+        <span class="tech-pill pill-blue">FastAPI</span>
+        <span class="tech-pill pill-purple">GenAI</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 2: SupplyIQ -->
     <div class="project-card reveal">
       <div class="project-glow project-glow-purple"></div>
       <div class="project-icon-row">
-        <div class="project-icon icon-purple">💳</div>
+        <div class="project-icon icon-purple">🧠</div>
+        <div class="project-links">
+          <a href="https://github.com/ayazcse/SupplyIQ" class="project-link" target="_blank">⌥ GitHub</a>
+          <a href="https://www.linkedin.com/posts/activity-7504591145503666176-nSGa" class="project-link" target="_blank">↗ LinkedIn Post</a>
+        </div>
+      </div>
+      <div class="project-title">SupplyIQ — AI-Powered Supply<br>Chain Risk Intelligence Platform</div>
+      <div class="project-metric">170K+ orders modeled across 4 ML models & a grounded GenAI analyst</div>
+      <div class="project-desc">
+        End-to-end platform simulating a mid-size supply chain (60 suppliers, 120 SKUs, 3 years of data) with a validated ETL pipeline, 22 advanced SQL queries, demand forecasting, stockout &amp; supplier risk scoring, anomaly detection, and a retrieval-grounded AI analyst — surfaced via FastAPI, Streamlit, and Power BI, with 34 passing automated tests.
+      </div>
+      <div class="project-tech">
+        <span class="tech-pill pill-blue">Python</span>
+        <span class="tech-pill pill-purple">SQL</span>
+        <span class="tech-pill pill-orange">LightGBM</span>
+        <span class="tech-pill pill-teal">Power BI</span>
+        <span class="tech-pill pill-blue">FastAPI</span>
+        <span class="tech-pill pill-purple">GenAI</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-card reveal">
+      <div class="project-glow project-glow-teal"></div>
+      <div class="project-icon-row">
+        <div class="project-icon icon-teal">💳</div>
         <div class="project-links">
           <!-- 🔗 REPLACE "#" with actual GitHub link -->
           <a href="https://github.com/ayazcse/UPI-Payment-Analytics-Fraud-Insights-Dashboard" class="project-link">⌥ GitHub</a>
@@ -1021,11 +1093,11 @@
       </div>
     </div>
 
-    <!-- PROJECT 2 -->
+    <!-- PROJECT 4 -->
     <div class="project-card reveal">
-      <div class="project-glow project-glow-teal"></div>
+      <div class="project-glow project-glow-orange"></div>
       <div class="project-icon-row">
-        <div class="project-icon icon-teal">💼</div>
+        <div class="project-icon icon-orange">💼</div>
         <div class="project-links">
           <!-- 🔗 REPLACE "#" with actual GitHub link -->
           <a href="https://github.com/ayazcse/LinkedIn-Job-Market-Intelligence-Dashboard" class="project-link">⌥ GitHub</a>
@@ -1046,11 +1118,11 @@
       </div>
     </div>
 
-    <!-- PROJECT 3 -->
+    <!-- PROJECT 5 -->
     <div class="project-card reveal">
-      <div class="project-glow project-glow-orange"></div>
+      <div class="project-glow project-glow-purple"></div>
       <div class="project-icon-row">
-        <div class="project-icon icon-orange">🍕</div>
+        <div class="project-icon icon-purple">🍕</div>
         <div class="project-links">
           <!-- 🔗 REPLACE "#" with actual GitHub link -->
           <a href="https://github.com/ayazcse/Food-Delivery-Business-Intelligence-Dashboard" class="project-link">⌥ GitHub</a>
@@ -1149,10 +1221,10 @@
     <div class="skill-group">
       <div class="skill-group-title">Programming & Query</div>
       <div class="skill-list">
-        <div class="skill-item"><div class="skill-dot dot-purple"></div><span class="skill-name">Python (Pandas, NumPy)</span></div>
-        <div class="skill-item"><div class="skill-dot dot-purple"></div><span class="skill-name">SQL (Joins, Window Functions)</span></div>
+        <div class="skill-item"><div class="skill-dot dot-purple"></div><span class="skill-name">Python (Pandas, NumPy, scikit-learn)</span></div>
+        <div class="skill-item"><div class="skill-dot dot-purple"></div><span class="skill-name">SQL (Joins, Window Functions, CTEs)</span></div>
         <div class="skill-item"><div class="skill-dot dot-purple"></div><span class="skill-name">Excel VBA</span></div>
-        <div class="skill-item"><div class="skill-dot dot-purple"></div><span class="skill-name">MySQL</span></div>
+        <div class="skill-item"><div class="skill-dot dot-purple"></div><span class="skill-name">PostgreSQL / MySQL / SQLite</span></div>
       </div>
     </div>
 
@@ -1162,17 +1234,17 @@
         <div class="skill-item"><div class="skill-dot dot-teal"></div><span class="skill-name">Power BI (DAX, Power Query)</span></div>
         <div class="skill-item"><div class="skill-dot dot-teal"></div><span class="skill-name">Tableau</span></div>
         <div class="skill-item"><div class="skill-dot dot-teal"></div><span class="skill-name">Excel Dashboards</span></div>
-        <div class="skill-item"><div class="skill-dot dot-teal"></div><span class="skill-name">Data Modeling</span></div>
+        <div class="skill-item"><div class="skill-dot dot-teal"></div><span class="skill-name">Data Modeling (Star Schema)</span></div>
       </div>
     </div>
 
     <div class="skill-group">
-      <div class="skill-group-title">Data Analytics</div>
+      <div class="skill-group-title">Data Analytics & ML</div>
       <div class="skill-list">
         <div class="skill-item"><div class="skill-dot dot-orange"></div><span class="skill-name">Exploratory Data Analysis</span></div>
         <div class="skill-item"><div class="skill-dot dot-orange"></div><span class="skill-name">Data Cleaning & Wrangling</span></div>
         <div class="skill-item"><div class="skill-dot dot-orange"></div><span class="skill-name">ETL Pipelines</span></div>
-        <div class="skill-item"><div class="skill-dot dot-orange"></div><span class="skill-name">KPI Reporting</span></div>
+        <div class="skill-item"><div class="skill-dot dot-orange"></div><span class="skill-name">ML (XGBoost, LightGBM) & SHAP</span></div>
       </div>
     </div>
 
@@ -1181,7 +1253,7 @@
       <div class="skill-list">
         <div class="skill-item"><div class="skill-dot dot-purple"></div><span class="skill-name">Jupyter Notebook</span></div>
         <div class="skill-item"><div class="skill-dot dot-purple"></div><span class="skill-name">Git & GitHub</span></div>
-        <div class="skill-item"><div class="skill-dot dot-purple"></div><span class="skill-name">Advanced Excel (Pivot, VLOOKUP)</span></div>
+        <div class="skill-item"><div class="skill-dot dot-purple"></div><span class="skill-name">FastAPI & Streamlit</span></div>
         <div class="skill-item"><div class="skill-dot dot-purple"></div><span class="skill-name">Generative AI Tools</span></div>
       </div>
     </div>
