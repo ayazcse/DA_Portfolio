@@ -1553,6 +1553,336 @@
       }
     }
 
+    /* =========================================================
+       MOBILE + TABLET POLISH
+       Keeps the desktop design intact while preventing clipping,
+       horizontal scrolling and awkward card/button wrapping.
+    ========================================================= */
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      min-width: 0;
+      overflow-x: hidden;
+    }
+
+    img,
+    svg,
+    video,
+    iframe {
+      max-width: 100%;
+    }
+
+    a,
+    button {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    @media (max-width: 850px) {
+
+      nav {
+        height: 68px;
+        padding: 0 4.5vw;
+      }
+
+      .nav-logo {
+        font-size: 1.08rem;
+      }
+
+      .nav-right {
+        gap: .55rem;
+      }
+
+      .nav-cta {
+        padding: .5rem .9rem;
+        font-size: .72rem;
+      }
+
+      .hero {
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 105px;
+      }
+
+      .hero-layout {
+        gap: 2.5rem;
+      }
+
+      .hero-subtitle {
+        width: 100%;
+        font-size: .95rem;
+        line-height: 1.7;
+      }
+
+      .hero-actions {
+        width: 100%;
+      }
+
+      .hero-actions .btn {
+        flex: 0 1 auto;
+      }
+
+      .trust-strip {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      section.content-section {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .experience-card,
+      .project-card,
+      .contact-box,
+      .education-card {
+        min-width: 0;
+        box-sizing: border-box;
+      }
+
+      .bullet-list li {
+        min-width: 0;
+        overflow-wrap: anywhere;
+      }
+
+      .small-link {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+
+      .project-card {
+        min-height: 0;
+      }
+    }
+
+    @media (max-width: 620px) {
+
+      nav {
+        height: 64px;
+        padding: 0 4vw;
+      }
+
+      .nav-logo {
+        font-size: 1rem;
+      }
+
+      .nav-cta {
+        padding: .48rem .8rem;
+        font-size: .68rem;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 92px;
+        padding-bottom: 55px;
+      }
+
+      .hero-kicker {
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: .62rem;
+        line-height: 1.3;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: clamp(2.45rem, 14vw, 3.8rem);
+        overflow-wrap: anywhere;
+      }
+
+      .hero-subtitle {
+        font-size: .9rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .hero-meta {
+        justify-content: center;
+      }
+
+      .meta-pill {
+        font-size: .68rem;
+      }
+
+      .avatar-area {
+        min-height: 350px;
+        width: 100%;
+      }
+
+      .avatar-ring {
+        max-width: 78vw;
+        max-height: 78vw;
+        width: 285px;
+        height: 285px;
+      }
+
+      .avatar-img {
+        max-width: 68vw;
+        max-height: 68vw;
+        width: 250px;
+        height: 250px;
+      }
+
+      .floating-card {
+        max-width: 38vw;
+        box-sizing: border-box;
+      }
+
+      .fc-one {
+        right: 0;
+      }
+
+      .fc-two {
+        left: 0;
+      }
+
+      .fc-three {
+        right: 0;
+      }
+
+      .trust-strip {
+        gap: .65rem;
+        padding-bottom: 3rem;
+      }
+
+      .trust-item {
+        padding: .9rem .8rem;
+        min-width: 0;
+      }
+
+      .trust-number {
+        font-size: 1.05rem;
+      }
+
+      .trust-label {
+        font-size: .6rem;
+        line-height: 1.35;
+      }
+
+      section.content-section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+
+      .section-head {
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        font-size: clamp(1.85rem, 9vw, 2.5rem);
+      }
+
+      .section-intro {
+        font-size: .88rem;
+        line-height: 1.65;
+      }
+
+      .experience-card {
+        padding: 1.25rem 1.15rem;
+      }
+
+      .experience-top {
+        gap: .7rem;
+      }
+
+      .role {
+        font-size: 1rem;
+      }
+
+      .company {
+        font-size: .78rem;
+      }
+
+      .date {
+        font-size: .62rem;
+        white-space: normal;
+      }
+
+      .bullet-list {
+        gap: .75rem;
+      }
+
+      .bullet-list li {
+        font-size: .82rem;
+        line-height: 1.6;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        padding: 1.25rem;
+      }
+
+      .contact-box {
+        padding: 3rem 1.2rem;
+        border-radius: 22px;
+      }
+
+      .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .contact-chip {
+        justify-content: center;
+      }
+
+      footer {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        gap: .7rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+
+      .nav-cta {
+        padding: .45rem .65rem;
+        font-size: .62rem;
+      }
+
+      .hero {
+        padding-left: 4vw;
+        padding-right: 4vw;
+      }
+
+      .avatar-area {
+        min-height: 320px;
+      }
+
+      .floating-card {
+        display: none;
+      }
+
+      .trust-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      section.content-section {
+        padding-left: 4vw;
+        padding-right: 4vw;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       * {
         scroll-behavior: auto !important;
@@ -1584,7 +1914,7 @@
 
       <div class="nav-availability">
         <span class="live-dot"></span>
-        Open to opportunities
+        Working Data Analyst · Open to opportunities
       </div>
 
       <ul class="nav-links">
@@ -1628,10 +1958,10 @@
           </h1>
 
           <p class="hero-subtitle">
-            I'm <strong>Ayaz Alam</strong>, a Computer Science graduate focused on
-            Data Analytics and Business Intelligence — using
-            <strong>SQL, Python, Power BI, PostgreSQL and data visualization</strong>
-            to turn messy datasets into clear, actionable insights.
+            I'm <strong>Ayaz Alam</strong>, a Data Analyst working across
+            <strong>SQL, Python, Power BI, Excel and business analytics</strong> —
+            turning raw business data into structured analysis, KPI reporting
+            and decision-ready insights.
           </p>
 
           <div class="hero-actions">
@@ -1741,8 +2071,8 @@
       </div>
 
       <div class="trust-item reveal">
-        <div class="trust-number">5+</div>
-        <div class="trust-label">Analytics dashboards</div>
+        <div class="trust-number">8+</div>
+        <div class="trust-label">Analytics solutions</div>
       </div>
 
       <div class="trust-item reveal">
@@ -1774,19 +2104,86 @@
         </div>
 
         <h2>
-          Experience that goes<br>
-          beyond tutorials.
+          Professional experience that goes<br>
+          beyond dashboards.
         </h2>
 
         <p class="section-intro">
-          Hands-on internship experience working with business data,
-          dashboards, automation and analytical workflows.
+          Professional analytics experience across business data,
+          SQL analysis, BI dashboards, reporting, ETL and analytical workflows.
         </p>
 
       </div>
 
 
       <div class="experience-grid">
+
+
+        <!-- Orynex -->
+
+        <article class="experience-card reveal">
+
+          <div class="experience-top">
+
+            <div>
+              <div class="role">
+                Data Analyst Intern
+              </div>
+
+              <div class="company">
+                Orynex · Remote
+              </div>
+            </div>
+
+            <div class="date">
+              Oct 2026 – Present
+            </div>
+
+          </div>
+
+          <ul class="bullet-list">
+
+            <li>
+              Perform data cleaning, preparation and validation to support
+              business and product analytics workflows, ensuring structured
+              data is ready for reporting and analysis.
+            </li>
+
+            <li>
+              Use SQL and Python/Pandas for analytical queries, aggregations,
+              trend analysis and data transformation across business data,
+              supporting KPI reporting and decision-making.
+            </li>
+
+            <li>
+              Develop KPI reports and Power BI dashboards using DAX
+              and Power Query to monitor business performance and
+              operational trends.
+            </li>
+
+            <li>
+              Conduct exploratory data analysis across sales, customer,
+              product and operational data to identify patterns,
+              trends and actionable business insights.
+            </li>
+
+            <li>
+              Support data-driven business decisions by converting
+              analytical findings into structured reports and
+              decision-ready insights.
+            </li>
+
+          </ul>
+
+          <a
+            href="https://drive.google.com/drive/folders/1kR17t0MH0G5tZk2MbZg1tQVtwXo9hWOy?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="small-link">
+            Further Details ↗
+          </a>
+
+        </article>
 
 
         <!-- YuvaIntern -->
@@ -1811,30 +2208,42 @@
 
           </div>
 
-
           <ul class="bullet-list">
 
             <li>
-              Designed Power BI dashboards integrating DAX measures
-              and Power Query ETL pipelines to consolidate multi-source
-              business data into unified KPI views.
+              Designed interactive Power BI dashboards using DAX,
+              Power Query and data modeling to present business KPIs
+              and performance trends.
             </li>
 
             <li>
-              Built KPI-driven visual reports tracking revenue trends,
-              operational metrics and performance benchmarks for
-              faster stakeholder decision-making.
+              Cleaned and transformed raw datasets using Power Query,
+              preparing structured data for reporting and visualization.
+            </li>
+
+            <li>
+              Created calculated measures and KPI visuals using DAX
+              to support business-focused analysis and reporting.
+            </li>
+
+            <li>
+              Developed interactive reports with filters, slicers and
+              drill-downs to make insights easier to explore and communicate.
+            </li>
+
+            <li>
+              Applied dashboard design and visual storytelling principles
+              to convert analytical findings into clear management-ready reports.
             </li>
 
           </ul>
-
 
           <a
             href="https://drive.google.com/drive/folders/1DpWr32DEnfavnl_Q4mvQxnMuPx8Jc6kU?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             class="small-link">
-            View Offer Letter + Certificate ↗
+            Further Details ↗
           </a>
 
         </article>
@@ -1890,11 +2299,11 @@
 
 
           <a
-            href="https://drive.google.com/drive/folders/1hRQ2KbTIFj5E9iqCD7gJjBMo_99VbkjY?usp=drive_link"
+            href="https://drive.google.com/drive/folders/1hRQ2KbTIFj5E9iqCD7gJbJMo_99VbkjY?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             class="small-link">
-            View Offer Letter + Certificate ↗
+            Further Details ↗
           </a>
 
         </article>
@@ -1920,8 +2329,8 @@
         </div>
 
         <h2>
-          Built like a<br>
-          <span style="color:var(--cyan)">real analyst.</span>
+          Built for<br>
+          <span style="color:var(--cyan)">real-world analytics.</span>
         </h2>
 
         <p class="section-intro">
@@ -3040,9 +3449,9 @@
         </h2>
 
         <p class="contact-text">
-          Open to entry-level Data Analyst, Business Intelligence,
-          MIS and analytics opportunities, internships and
-          meaningful data projects.
+          Open to Data Analyst, Business Intelligence, MIS and
+          analytics opportunities where I can contribute through
+          SQL, Python, Power BI and business-focused analysis.
         </p>
 
 
@@ -3103,7 +3512,7 @@
   <footer>
 
     <div>
-      © 2026 Ayaz Alam · Data Analyst · Greater Noida, UP
+      © 2026 Ayaz Alam · Data Analyst | Business Intelligence · Greater Noida, UP
     </div>
 
     <div class="footer-name">
